@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -59,6 +63,22 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             Log.i("Donwloaded Content:",result);
+
+            try {
+                JSONObject jsonObject = new JSONObject(result);
+                String weatherInfo = jsonObject.getString("weather");
+                Log.i("Weather Details:",weatherInfo);
+
+
+                JSONArray arr = new JSONArray(weatherInfo);
+                for(int i=0;i<arr.length();i++){
+                    JSONObject object = arr.getJSONObject(i);
+                    Log.i("Individual Content:",object.getString("main"));
+                    
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
