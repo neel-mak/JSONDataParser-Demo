@@ -1,6 +1,8 @@
 # JSONDataParser-Demo
 This repository is added to demonstrate how we can parse the JSON data. It also include How we can download any content from web.
 
+_I am just donwloading all the content as String (assume as a large text file). So, I have done accordingly. It's just to understand the functionality of doInBackground() method and How we can use that._
+
 ## How to Download content/file from web? 
 So, for accessing any file from web We can use doInBackground( .. ) method of AsyncTask< .. >. 
 I have made one **DownloadTask Class** which extends **AsyncTask< ... >** and that gives the implementation of method **doInBackground()** as following : 
