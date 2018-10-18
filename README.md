@@ -73,4 +73,4 @@ protected void onPostExecute(String result) {
 As you can observe that using JSONArray we can read multiple objects and also extract their individual data-value.
 As I mentioned earlier, These is the one way of possible all options. 
 
-I hope this repo may help you, Enjoy ur day!!!
+I hope this repo helped you, Enjoy ur day!!!
